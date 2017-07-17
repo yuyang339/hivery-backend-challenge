@@ -1,6 +1,6 @@
 # Paranuara Challenge
 Paranuara is a class-m planet. Those types of planets can support human life, for that reason the president of the Checktoporov decides to send some people to colonise this new planet and
-reduce the number of people in ther own country. After 10 years, the new president wants to know how the new colony is growing, and want some information about his citizens. Hence he hired you to build an API to provide the desired information.
+reduce the number of people in ther own country. After 10 years, the new president wants to know how the new colony is growing, and want some information about his citizens. Hence he hired you to build a web API to provide the desired information.
 
 The government from Paranuara will provide you two json files (located at resource folder) which will provide information about all the citizens in Paranauara (name, age, friends list, fruits and vegetables they like to eat...) and all founded companies on that planet. 
 Unfortunately, the systems are not that evolved yet, thus you need to clean and organise the data before use. 
