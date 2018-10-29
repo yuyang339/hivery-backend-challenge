@@ -20,6 +20,6 @@ To deliver your system, you need to send the link on GitHub. Your solution must 
 - Installation instructions that work.
 - During installation, we may use different companies.json or people.json files.
 - The API must work.
-- Overall good software craftsmanship, e.g. as advocated in "Clean Code" by Robert Martin.
+- Tests
 
 Feel free to reach to your point of contact for clarification if you have any questions.
