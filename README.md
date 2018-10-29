@@ -2,8 +2,8 @@
 Paranuara is a class-m planet. Those types of planets can support human life, for that reason the president of the Checktoporov decides to send some people to colonise this new planet and
 reduce the number of people in their own country. After 10 years, the new president wants to know how the new colony is growing, and wants some information about his citizens. Hence he hired you to build a rest API to provide the desired information.
 
-The government from Paranuara will provide you two json files (located at resource folder) which will provide information about all the citizens in Paranuara (name, age, friends list, fruits and vegetables they like to eat...) and all founded companies on that planet. 
-Unfortunately, the systems are not that evolved yet, thus you need to clean and organise the data before use. 
+The government from Paranuara will provide you two json files (located at resource folder) which will provide information about all the citizens in Paranuara (name, age, friends list, fruits and vegetables they like to eat...) and all founded companies on that planet.
+Unfortunately, the systems are not that evolved yet, thus you need to clean and organise the data before use.
 For example, instead of providing a list of fruits and vegetables their citizens like, they are providing a list of favourite food, and you will need to split that list (please, check below the options for fruits and vegetables).
 
 ## New Features
@@ -15,4 +15,11 @@ Your API must provides these end points:
 ## Delivery
 To deliver your system, you need to send the link on GitHub. Your solution must provide tasks to install dependencies, build the system and run. Solutions that does not fit this criteria **will not be accepted** as a solution. Assume that we have already installed in our environment Java, Ruby, Node.js, Python, MySQL, MongoDB and Redis; any other technologies required must be installed in the install dependencies task. Moreover well tested and designed systems are one of the main criteria of this assessement 
 
+## Evaluation criteria
+- Solutions written in Python would be preferred.
+- Installation instructions that work.
+- During installation, we may use different companies.json or people.json files.
+- The API must work.
+- Overall good software craftsmanship, e.g. as advocated in "Clean Code" by Robert Martin.
 
+Feel free to reach to your point of contact for clarification if you have any questions.
