@@ -20,4 +20,3 @@ class People(Document):
     friends = ListField()
     greeting = StringField()
     favouriteFood = ListField()
-    
