@@ -39,3 +39,9 @@ def test_friend_route(client):
         assert resp.json == {
             "title": "Please provide valid query ['isalive', 'eyecolor']"
         }
+
+def test_people_route(client):
+    with patch("paranuara.resources.people.PeopleController.getFavoriteFood", return_value={}):
+        resp = client.simulate_get('/api/people/2/favoritefood')
+
+        assert resp.status == status.HTTP_200

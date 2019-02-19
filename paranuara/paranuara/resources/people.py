@@ -3,10 +3,10 @@ import json
 from paranuara.models.People import People
 from paranuara.helpers.common import isFruit, isVegetable
 class PeopleController(object):
-    def __init__(self, id=None, name=None):
+    def __init__(self, index=None, name=None):
         try:
             if id:
-                people= People.objects.get(index=id)
+                people= People.objects.get(index=index)
             elif name:
                 people= People.objects.get(name=name)
             else:
@@ -15,14 +15,14 @@ class PeopleController(object):
             raise
         
         self.model = people
-        self.id = id
+        self.index = index
     
     def getFavoriteFood(self):
         data = {
+            "username": self.username,
+            "age": self.age,
             "fruits": [],
             "vegetables": [],
-            "username": self.username,
-            "age": self.age
         }
         for food in self.model.favouriteFood:
             if isFruit(food):
@@ -52,10 +52,10 @@ class PeopleController(object):
         return [ friend["index"] for friend in self.model.friends]
 
 class PeopleResource(object):
-    def on_get(self, req, resp, people_id):
+    def on_get(self, req, resp, index):
         """Handles GET requests"""
         try:
-            peopleController = PeopleController(id=people_id)
+            peopleController = PeopleController(index=people_index)
         except:
             raise falcon.HTTPBadRequest("This people is not existed")
         
