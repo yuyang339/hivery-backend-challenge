@@ -35,7 +35,6 @@ GET /api/company/{company_id}/employees
 ### Request
 - `company_id`: String: company index
 
-### Response
 
 ## People API
 ### Get a list of fruits and vegetables
@@ -48,7 +47,6 @@ Given a people id, this API returns a list of fruits and vegetables.
 ### Request
 - `people_id`: String: people index
 
-### Response
 
 ## Friends API
 ### Get information and common friends
@@ -61,8 +59,7 @@ Given 2 people, provide their information (Name, Age, Address, phone) and the li
 ### Request
 - `people_id`: String: people index
 
-### Response
 
 # TODO
 - more unittest
-- support more HTTP requst types 
+- support more HTTP methods 
