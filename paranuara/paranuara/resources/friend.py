@@ -19,9 +19,9 @@ class FriendController():
 
         if len(query):
             has_died = not query['isalive']
-            friends = People.objects(index=friendsOfAB, eyeColor=query['eyecolor'].lower(), has_died=has_died)
+            friends = People.objects(index__in=friendsOfAB, eyeColor=query['eyecolor'].lower(), has_died=has_died)
         else:
-            friends = People.objects(index=friendsOfAB)
+            friends = People.objects(index__in=friendsOfAB)
 
         data = {
             "PeopleA": {
