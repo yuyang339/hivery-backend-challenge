@@ -17,7 +17,7 @@ class ParanuaraService(falcon.API):
         # Build routes
         self.add_route("/api/company/{company_id}/employees", company_res)
         self.add_route("/api/people/{people_id}/favoritefood", people_res)
-        self.add_route("/api/commonfriend/{people_aid}/{people_bid}", friend_res)
+        self.add_route("/api/commonfriends/{people_aid}/{people_bid}", friend_res)
 
     def start(self):
         """ A hook to when a Gunicorn worker calls run()."""

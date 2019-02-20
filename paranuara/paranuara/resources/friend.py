@@ -17,7 +17,7 @@ class FriendController():
         friendsOfB = set(peopleControllerB.getFriendIds())
         friendsOfAB = list(friendsOfA.intersection(friendsOfB))
 
-        if len(query_string):
+        if len(query):
             has_died = not query['isalive']
             friends = People.objects(index__in=friendsOfAB, eyeColor=query['eyecolor'].lower(), has_died=has_died)
         else:
@@ -41,11 +41,11 @@ class FriendController():
         for friend in friends:
             data["Friends"].append({
                 "name": friend.name,
-                "eyecolor": friend.eyeColor,
-                "isAlive": not friend.has_died,
                 "age": friend.age,
                 "phone": friend.phone,
-                "address": friend.address
+                "address": friend.address,
+                "eyecolor": friend.eyeColor,
+                "isalive": not friend.has_died
             })
 
         return data
