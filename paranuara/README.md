@@ -26,37 +26,32 @@ Always running command under `hivery-backend-chanllenge/paranuara`.
 # API
 ## 1. Company API
 ### 1.1 Get all employees
+Given a company id, this API returns all the employees.
 ```
 GET /api/company/{company_id}/employees
 ```
-### Description
-Given a company id, this API returns all the employees.
-
 
 ## 2. People API
 ### 2.1 Get a list of fruits and vegetables
- ```
+Given a people id, this API returns a list of fruits and vegetables.
+```
 GET /api/people/{people_id}/favoritefood
 ```
-### Description
-Given a people id, this API returns a list of fruits and vegetables.
+
 
 
 ## 3. Common Friends API
 ### 3.1 Get people information and common friends
- ```
+Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common 
+```
 GET /api/people/{people_aid}/{people_bid}
 ```
-### Description
-Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common
 
 ### 3.2 Get people information and common friends which have brown eyes and are still alive
- ```
+Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive.
+```
 GET /api/people/{people_aid}/{people_bid}?isalive=true&eyecolor=brown
 ```
-
-### Description
-Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive.
 
 
 
