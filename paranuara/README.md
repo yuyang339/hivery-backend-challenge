@@ -24,39 +24,33 @@ Always running command under `hivery-backend-chanllenge/paranuara`.
 - `pytest tests`
 
 # API
-## Company API
-### Get all employees
+## 1. Company API
+### 1.1 Get all employees
 ```
 GET /api/company/{company_id}/employees
 ```
 ### Description
-,Given a company id, this API returns all the employees.
-
-### Request
-- `company_id`: String: company index
+Given a company id, this API returns all the employees.
 
 
-## People API
-### Get a list of fruits and vegetables
+## 2. People API
+### 2.1 Get a list of fruits and vegetables
  ```
 GET /api/people/{people_id}/favoritefood
 ```
 ### Description
 Given a people id, this API returns a list of fruits and vegetables.
 
-### Request
-- `people_id`: String: people index
 
-
-## Common Friends API
-### Get people information and common friends
+## 3. Common Friends API
+### 3.1 Get people information and common friends
  ```
 GET /api/people/{people_aid}/{people_bid}
 ```
 ### Description
 Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common
 
-### Get people information and common friends which have brown eyes and are still alive
+### 3.2 Get people information and common friends which have brown eyes and are still alive
  ```
 GET /api/people/{people_aid}/{people_bid}?isalive=true&eyecolor=brown
 ```
@@ -64,8 +58,6 @@ GET /api/people/{people_aid}/{people_bid}?isalive=true&eyecolor=brown
 ### Description
 Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive.
 
-### Request
-- `people_id`: String: people index
 
 
 # TODO
