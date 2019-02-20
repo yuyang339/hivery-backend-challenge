@@ -49,7 +49,7 @@ class PeopleController(object):
         return self.model.phone
 
     def getFriendIds(self):
-        return [friend["index"] for friend in self.model.friends]
+        return [friend["index"] for friend in self.model.friends if int(self.people_id) != friend["index"]]
 
 class PeopleResource(object):
     def on_get(self, req, resp, people_id):
