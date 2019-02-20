@@ -5,17 +5,17 @@ from paranuara.helpers.common import isFruit, isVegetable
 class PeopleController(object):
     def __init__(self, people_id=None, name=None):
         try:
-            if id:
-                people= People.objects.get(index=people_id)
+            if people_id:
+                people = People.objects.get(index=people_id)
             elif name:
-                people= People.objects.get(name=name)
+                people = People.objects.get(name=name)
             else:
                 raise
         except:
             raise
         
         self.model = people
-        self.index = index
+        self.people_id = people_id
     
     def getFavoriteFood(self):
         data = {
@@ -49,7 +49,7 @@ class PeopleController(object):
         return self.model.phone
 
     def getFriendIds(self):
-        return [ friend["index"] for friend in self.model.friends]
+        return [friend["index"] for friend in self.model.friends]
 
 class PeopleResource(object):
     def on_get(self, req, resp, people_id):

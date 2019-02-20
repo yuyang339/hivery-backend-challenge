@@ -10,8 +10,8 @@ VALID_Q = ['isalive', 'eyecolor']
 class FriendController():
     @staticmethod
     def getCommonFriends(people_aid, people_bid, query):
-        peopleControllerA = PeopleController(id=people_aid)
-        peopleControllerB = PeopleController(id=people_bid)
+        peopleControllerA = PeopleController(people_id=people_aid)
+        peopleControllerB = PeopleController(people_id=people_bid)
 
         friendsOfA = set(peopleControllerA.getFriendIds())
         friendsOfB = set(peopleControllerB.getFriendIds())
@@ -19,9 +19,9 @@ class FriendController():
 
         if len(query):
             has_died = not query['isalive']
-            friends = People.objects(index__in=friendsOfAB, eyeColor=query['eyecolor'].lower(), has_died=has_died)
+            friends = People.objects(index=friendsOfAB, eyeColor=query['eyecolor'].lower(), has_died=has_died)
         else:
-            friends = People.objects(index__in=friendsOfAB)
+            friends = People.objects(index=friendsOfAB)
 
         data = {
             "PeopleA": {
