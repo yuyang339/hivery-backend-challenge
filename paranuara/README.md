@@ -48,11 +48,16 @@ Given a people id, this API returns a list of fruits and vegetables.
 - `people_id`: String: people index
 
 
-## Friends API
-### Get information and common friends
+## Common Friends API
+### Get people information and common friends
  ```
 GET /api/people/{people_aid}/{people_bid}
 ```
+### Get people information and common friends which have brown eyes and are still alive
+ ```
+GET /api/people/{people_aid}/{people_bid}?isalive=true&eyecolor=brown
+```
+
 ### Description
 Given 2 people, provide their information (Name, Age, Address, phone) and the list of their friends in common which have brown eyes and are still alive.
 
